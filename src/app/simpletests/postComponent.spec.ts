@@ -29,12 +29,22 @@ describe('Post Compontent', () => {
         component.like();
         // Assert
         expect(component.totalLikes).toBe(4);
+
     })
 
     it('Should decrease likes 👎', () => {
 
         component.dislike();
-
         expect(component.totalLikes).toBe(2);
+
     })
+    
+    it('Should decrease likes only if the totallikes is not 0 👎', () => {
+
+        component.totalLikes = 0;
+        component.dislike();
+        expect(component.totalLikes).not.toBe(-1);
+
+    })
+
 })
