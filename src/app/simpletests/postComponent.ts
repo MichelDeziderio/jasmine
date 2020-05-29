@@ -1,5 +1,5 @@
 export class postComponent {
-    totalLikes: number = 0;
+    totalLikes: number;
 
     like() {
         this.totalLikes++;
@@ -10,5 +10,3 @@ export class postComponent {
             this.totalLikes--;
     }
 }
-
-// Fundamentals & Practices 
